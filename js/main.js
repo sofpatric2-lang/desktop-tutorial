@@ -328,7 +328,7 @@ function initYear() {
 }
 
 /* ---------- boot ---------- */
-document.addEventListener("DOMContentLoaded", () => {
+function boot() {
   if (REDUCED) document.documentElement.classList.add("no-motion");
   runPreloader();
   initHeader();
@@ -343,4 +343,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initWaFloat();
   initYear();
   if (!NUMS_READY) console.info("[etqan] وضع العرض بمحتوى مؤقت — أرقام التواصل (الجزائر) غير معتمدة/غير مضافة بعد.");
-});
+}
+if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+else boot();

@@ -429,9 +429,29 @@
     <a class="action action--tel" data-tel href="#">اتصال</a>
   </div>
 
-  <script src="assets/vendor/gsap.min.js" defer></script>
-  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
-  <script src="js/motion.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script>
+  (function () {
+    var chain = [
+      { src: "assets/vendor/gsap.min.js", fallback: "https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" },
+      { src: "assets/vendor/ScrollTrigger.min.js", fallback: "https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" },
+      { src: "js/motion.js" },
+      { src: "js/main.js" }
+    ];
+    var i = 0;
+    function load(item, triedFallback) {
+      var s = document.createElement("script");
+      s.src = item.src;
+      s.async = false;
+      s.onload = next;
+      s.onerror = function () {
+        if (!triedFallback && item.fallback) { item.src = item.fallback; load(item, true); }
+        else { next(); }
+      };
+      document.body.appendChild(s);
+    }
+    function next() { if (i < chain.length) load(chain[i++], false); }
+    next();
+  })();
+  </script>
 </body>
 </html>

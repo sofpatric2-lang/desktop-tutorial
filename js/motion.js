@@ -441,11 +441,17 @@
   initTapFeedback();
 
   /* ------------------------------------------------------------
-     boot: wait for fonts/layout, then refresh triggers
+     boot: wait for fonts/layout/images, then refresh triggers
   ------------------------------------------------------------ */
   const refresh = () => ScrollTrigger.refresh();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
   window.addEventListener("load", refresh);
+  // images can shift layout after fonts; refresh once they settle
+  if (document.readyState === "complete") refresh();
+  else setTimeout(refresh, 700);
+  $$("img").forEach((img) => {
+    if (!img.complete) img.addEventListener("load", () => setTimeout(refresh, 50), { once: true });
+  });
 
   initScroll();
 })();
