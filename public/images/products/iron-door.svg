@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#42484F"/>
+      <stop offset="1" stop-color="#191D22"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#50585F"/>
+      <stop offset=".45" stop-color="#333A41"/>
+      <stop offset="1" stop-color="#23282D"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#AFC6CE" stop-opacity=".85"/>
+      <stop offset=".5" stop-color="#7FA2AE" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#54707C" stop-opacity=".8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".3" cy=".18" r=".8">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="560" fill="url(#bg)"/>
+  <rect width="480" height="560" fill="url(#glow)"/>
+  <rect x="96" y="516" width="288" height="10" rx="5" fill="#0C0F12" opacity=".8"/>
+  <ellipse cx="240" cy="516" rx="158" ry="12" fill="#000" opacity=".28"/>
+  <!-- frame -->
+  <path d="M120 512V262a120 120 10 0 1 240 0v250h-16V262a104 104 0 0 0-208 0v250z" fill="#171B1F"/>
+  <!-- leaf -->
+  <path d="M136 512V266a104 104 0 0 1 208 0v246z" fill="url(#leaf)"/>
+  <path d="M136 266a104 104 0 0 1 208 0" fill="none" stroke="#0F1215" stroke-width="10"/>
+  <!-- inner stiles -->
+  <path d="M136 512V266a104 104 0 0 1 208 0v246zM156 512V268h168M156 268v244M188 291v221M292 291v221" fill="none" stroke="#5C656D" stroke-width="2.5" opacity=".9"/>
+  <!-- center bars -->
+  <rect x="230" y="120" width="20" height="392" rx="8" fill="#0F1215"/>
+  <rect x="234" y="124" width="12" height="384" rx="6" fill="#535B63"/>
+  <!-- upper glass arch -->
+  <path d="M204 176v64h72v-64a36 36 0 0 0-72 0z" fill="url(#glass)"/>
+  <path d="M204 176v64h72v-64a36 36 0 0 0-72 0z" fill="none" stroke="#3A4147" stroke-width="4"/>
+  <path d="M218 150l14 16M240 142l16 20" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity=".5"/>
+  <!-- rivets -->
+  <g fill="#6B747C">
+    <circle cx="148" cy="300" r="4"/><circle cx="332" cy="300" r="4"/>
+    <circle cx="148" cy="380" r="4"/><circle cx="332" cy="380" r="4"/>
+    <circle cx="148" cy="460" r="4"/><circle cx="332" cy="460" r="4"/>
+  </g>
+  <!-- kickplate -->
+  <rect x="160" y="474" width="160" height="26" rx="6" fill="#2C3238" stroke="#5C656D" stroke-width="2"/>
+  <!-- handle -->
+  <rect x="196" y="330" width="14" height="58" rx="6" fill="#C9A13B"/>
+  <rect x="200" y="336" width="6" height="46" rx="3" fill="#E7CF8D"/>
+</svg>

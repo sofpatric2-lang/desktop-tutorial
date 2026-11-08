@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560" role="img">
+  <defs>
+    <linearGradient id="pbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DCE4E8"/>
+      <stop offset="1" stop-color="#AEC0C9"/>
+    </linearGradient>
+    <linearGradient id="pvc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FDFEFE"/>
+      <stop offset=".55" stop-color="#EEF2F4"/>
+      <stop offset="1" stop-color="#D3DBE0"/>
+    </linearGradient>
+    <radialGradient id="pglow" cx=".3" cy=".15" r=".85">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="560" fill="url(#pbg)"/>
+  <rect width="480" height="560" fill="url(#pglow)"/>
+  <ellipse cx="240" cy="514" rx="152" ry="12" fill="#5E7480" opacity=".3"/>
+  <rect x="104" y="508" width="272" height="10" rx="5" fill="#7C93A0" opacity=".7"/>
+  <!-- outer frame -->
+  <rect x="122" y="58" width="236" height="450" rx="14" fill="#C3CDD3"/>
+  <rect x="132" y="68" width="216" height="440" rx="10" fill="url(#pvc)"/>
+  <!-- soft bevel -->
+  <rect x="140" y="76" width="200" height="424" rx="8" fill="none" stroke="#FFFFFF" stroke-width="3" opacity=".9"/>
+  <rect x="140" y="76" width="200" height="424" rx="8" fill="none" stroke="#B7C3CA" stroke-width="2"/>
+  <!-- interior slab seam -->
+  <rect x="162" y="98" width="156" height="180" rx="10" fill="#F6F8F9" stroke="#C3CDD3" stroke-width="3"/>
+  <rect x="162" y="304" width="156" height="190" rx="10" fill="#F6F8F9" stroke="#C3CDD3" stroke-width="3"/>
+  <!-- drainage detail -->
+  <g stroke="#B7C3CA" stroke-width="2" opacity=".8">
+    <path d="M168 288h144M168 482h144" stroke-dasharray="14 10"/>
+  </g>
+  <!-- handle -->
+  <rect x="270" y="356" width="58" height="26" rx="13" fill="#8B989F"/>
+  <rect x="276" y="360" width="46" height="18" rx="9" fill="#F2F5F7"/>
+  <circle cx="278" cy="369" r="3" fill="#8B989F"/>
+  <!-- lock -->
+  <rect x="252" y="352" width="10" height="34" rx="4" fill="#9AA7AE"/>
+  <!-- window small -->
+  <rect x="176" y="112" width="128" height="152" rx="8" fill="#CBE2EA"/>
+  <rect x="176" y="112" width="128" height="152" rx="8" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+  <path d="M176 188h128M240 112v152" stroke="#FFFFFF" stroke-width="6"/>
+  <path d="M196 136l8 10M212 128l10 14" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+  <path d="M186 148a34 34 0 0 1 24 18" stroke="#FFFFFF" stroke-width="3" fill="none" opacity=".65"/>
+  <!-- brand green accent strip at foot -->
+  <rect x="132" y="490" width="216" height="18" rx="9" fill="#0E2F26"/>
+  <rect x="132" y="489" width="216" height="3" rx="2" fill="#C9A13B" opacity=".55"/>
+</svg>

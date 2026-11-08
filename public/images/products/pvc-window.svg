@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560" role="img">
+  <defs>
+    <linearGradient id="ebg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E4ECEF"/>
+      <stop offset="1" stop-color="#B9C8CF"/>
+    </linearGradient>
+    <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#CADDE8"/>
+      <stop offset=".6" stop-color="#9FC3D6"/>
+      <stop offset="1" stop-color="#7FA9C0"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FCFDFD"/>
+      <stop offset=".55" stop-color="#EDF1F3"/>
+      <stop offset="1" stop-color="#D2DADF"/>
+    </linearGradient>
+    <radialGradient id="wglow" cx=".32" cy=".14" r=".9">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="560" fill="url(#ebg)"/>
+  <rect width="480" height="560" fill="url(#wglow)"/>
+  <ellipse cx="240" cy="516" rx="160" ry="12" fill="#5E7480" opacity=".3"/>
+  <rect x="84" y="510" width="312" height="12" rx="6" fill="#FDFEFE" stroke="#B7C3CA" stroke-width="1.5"/>
+  <!-- outer frame -->
+  <rect x="82" y="98" width="316" height="416" rx="12" fill="url(#frame)"/>
+  <rect x="92" y="108" width="296" height="396" rx="8" fill="url(#frame)" stroke="#C3CDD3" stroke-width="2"/>
+  <!-- glass area -->
+  <rect x="106" y="122" width="268" height="368" rx="4" fill="url(#sky1)"/>
+  <!-- horizon + greenery reflection -->
+  <rect x="106" y="328" width="268" height="162" fill="#5F8758" opacity=".5"/>
+  <path d="M106 356c30 -8 52 6 84-4s56 4 92-6 62 2 92-4v148H106z" fill="#48663F" opacity=".65"/>
+  <circle cx="150" cy="402" r="16" fill="#6E9463" opacity=".8"/>
+  <circle cx="186" cy="414" r="12" fill="#7C9F6F" opacity=".7"/>
+  <!-- mullions -->
+  <rect x="106" y="292" width="268" height="10" fill="url(#frame)"/>
+  <rect x="106" y="206" width="268" height="10" fill="url(#frame)"/>
+  <rect x="232" y="122" width="12" height="368" fill="url(#frame)"/>
+  <!-- glass glare -->
+  <g stroke="#FFFFFF" stroke-linecap="round" opacity=".65">
+    <path d="M126 190l60-60" stroke-width="9"/>
+    <path d="M146 196l70-70" stroke-width="5"/>
+    <path d="M352 300l-120 120" stroke-width="12"/>
+    <path d="M368 282l-140 140" stroke-width="6"/>
+  </g>
+  <!-- opening handle -->
+  <rect x="248" y="238" width="16" height="72" rx="8" fill="#E8ECee" stroke="#B7C3CA"/>
+  <circle cx="256" cy="262" r="4" fill="#9AA7AE"/>
+  <!-- pvc sill drip -->
+  <rect x="84" y="486" width="316" height="14" rx="7" fill="url(#frame)"/>
+  <!-- brand dab -->
+  <rect x="216" y="492" width="48" height="2.5" fill="#C9A13B" opacity=".7"/>
+</svg>

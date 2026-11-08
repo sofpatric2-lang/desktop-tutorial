@@ -1,0 +1,50 @@
+/* ============================================================
+   مؤسسة الإتقان — motion.css
+   Overrides ONLY active when GSAP takes over (html.mgsap).
+   Without GSAP or with reduced-motion: pure fallback (styles.css).
+   All rules are transform/opacity/clip-path based (no layout shift).
+   ============================================================ */
+
+/* ---------- headline line-mask (split typography) ---------- */
+.line-mask{display:block;overflow:hidden;padding-block:.06em}
+.line-inner{display:block;will-change:transform}
+
+/* ---------- when GSAP owns reveal-on-scroll ---------- */
+.mgsap .reveal{opacity:1;transform:none;transition:none}
+
+/* single owner of hero art entrance (JS starts hidden via gsap.set) */
+.mgsap .hero-art{clip-path:inset(100% 0% 0% 0%)}
+
+/* ---------- nav: one animated cue instead of per-link underline ---------- */
+.mgsap .main-nav a::after{display:none}
+.nav-cue{position:absolute;bottom:3px;left:0;height:2.5px;width:36px;border-radius:2px;
+  background:linear-gradient(90deg,transparent,rgba(201,161,59,.95) 30%,rgba(201,161,59,.95) 70%,transparent);
+  opacity:0;pointer-events:none}
+.main-nav{position:relative}
+
+/* ---------- cards: JS owns hover physics (tilt + lift + zoom) ---------- */
+.mgsap .card{transform-style:preserve-3d;will-change:transform}
+@media (hover:hover) and (pointer:fine){
+  .mgsap .card:hover{transform:none}        /* CSS lift disabled; JS drives it */
+  .mgsap .card:hover .card-img{transform:scale(1.055);filter:saturate(1.06) brightness(1.03)}
+}
+
+/* ---------- magnetic buttons (JS owns transform) ---------- */
+.magnetic{will-change:transform}
+
+/* ---------- progress line (process timeline, RTL) ---------- */
+.process-progress{height:2px;border-radius:2px;margin-bottom:36px;
+  background:linear-gradient(90deg,transparent,rgba(201,161,59,.2) 12%,rgba(201,161,59,.9) 88%,transparent);
+  transform:scaleX(0);transform-origin:right center}
+.mgsap .stats{border-top-color:transparent}
+
+/* ---------- media entrance state (project/gallery tiles, RTL wipe) ---------- */
+.mgsap .media-gate{overflow:hidden}
+
+/* ---------- menu links: GSAP owns the stagger ---------- */
+@media (max-width:860px){
+  .mgsap .mobile-menu nav a{opacity:1;transform:none;filter:none;transition:none;transition-delay:0s}
+}
+
+/* ---------- floating WA + to-top: JS tap feedback polish ---------- */
+.wa-float,.to-top{will-change:transform}

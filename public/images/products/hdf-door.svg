@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560" role="img">
+  <defs>
+    <linearGradient id="hbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EDE3D2"/>
+      <stop offset="1" stop-color="#CBBBA0"/>
+    </linearGradient>
+    <linearGradient id="hdf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7F0E2"/>
+      <stop offset=".5" stop-color="#EADFC9"/>
+      <stop offset="1" stop-color="#D6C7AB"/>
+    </linearGradient>
+    <linearGradient id="groove" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#B4A284"/>
+      <stop offset=".35" stop-color="#F7F0E2"/>
+      <stop offset=".62" stop-color="#F7F0E2"/>
+      <stop offset="1" stop-color="#B4A284"/>
+    </linearGradient>
+    <radialGradient id="hglow" cx=".3" cy=".15" r=".85">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="560" fill="url(#hbg)"/>
+  <rect width="480" height="560" fill="url(#hglow)"/>
+  <ellipse cx="240" cy="514" rx="150" ry="12" fill="#6E5B3E" opacity=".28"/>
+  <rect x="106" y="508" width="268" height="10" rx="5" fill="#8A7A5E" opacity=".7"/>
+  <!-- frame -->
+  <rect x="120" y="60" width="240" height="448" rx="8" fill="#B49F7E"/>
+  <rect x="130" y="70" width="220" height="438" rx="5" fill="url(#hdf)"/>
+  <!-- routed panel: upper arc top -->
+  <path d="M152 346V208a88 88 0 0 1 176 0v138" fill="url(#groove)" opacity=".55"/>
+  <path d="M152 346V208a88 88 0 0 1 176 0v138" fill="none" stroke="#B4A284" stroke-width="3.5"/>
+  <!-- routed panel: lower -->
+  <rect x="152" y="374" width="176" height="112" rx="6" fill="url(#groove)" opacity=".55"/>
+  <rect x="152" y="374" width="176" height="112" rx="6" fill="none" stroke="#B4A284" stroke-width="3.5"/>
+  <!-- subtle outer keyline of slab -->
+  <path d="M130 70h220v438H130z" fill="none" stroke="#A58F68" stroke-width="4"/>
+  <!-- handle -->
+  <circle cx="166" cy="400" r="7" fill="#C9A13B"/>
+  <rect x="158" y="400" width="16" height="50" rx="7" fill="#C9A13B" stroke="#8F6D1F" stroke-width="1.5"/>
+  <rect x="163" y="406" width="6" height="38" rx="3" fill="#E7CF8D"/>
+  <!-- hinge hints -->
+  <g fill="#9A8663" opacity=".7">
+    <rect x="136" y="112" width="8" height="26" rx="3"/>
+    <rect x="336" y="112" width="8" height="26" rx="3"/>
+    <rect x="136" y="452" width="8" height="26" rx="3"/>
+    <rect x="336" y="452" width="8" height="26" rx="3"/>
+  </g>
+</svg>
